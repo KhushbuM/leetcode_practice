@@ -5,7 +5,7 @@ def longest_consecutive(nums: list) -> int:
     subSet = set(nums)
     longest = 0
 
-    for num in nums:
+    for num in subSet:
 
         if num - 1 not in subSet:
             current_num = num
@@ -15,7 +15,7 @@ def longest_consecutive(nums: list) -> int:
                 curr_len += 1
                 current_num += 1
 
-        longest = max(longest, curr_len)  
+            longest = max(longest, curr_len)  
 
     return longest          
 
